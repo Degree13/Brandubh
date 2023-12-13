@@ -1,7 +1,8 @@
 # 🎲 Groupe n°2 - Brandubh 🎲
 
-Want to test the graphic version ? [Download the executable !](https://github.com/Degree13/Brandubh/blob/master/Brandubh.zip)   
-*(Unzip and play, no dependencies required !)*
+Want to test the graphic version ? *(Unzip and play, no dependencies required !)*   
+
+[![Download Brandubh](https://img.shields.io/badge/Download-YourApp-blue)](https://github.com/Degree13/Brandubh/blob/master/Brandubh.zip)   
 
 ## 🚀 Group members
 - 🧑‍💻 Théo GOUSSOT
