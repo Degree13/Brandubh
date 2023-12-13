@@ -23,6 +23,9 @@ public class GameLauncher extends Application {
     public static void main(String[] args) {
         loadFilesThread = new Thread(() -> BRBDecider.loadData("dataMap.bin"));
         loadFilesThread.start();
+        
+        // TODO; temporary, remove later
+        args = new String[]{"graphical"};
 
         System.out.println("Choose the game version:");
         System.out.println("1. Console Version");
