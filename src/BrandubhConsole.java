@@ -44,13 +44,13 @@ public class BrandubhConsole {
 
         switch (mode) {
             case HUMAN_VS_HUMAN:
-                System.out.println(BLACK_BOLD +"You chose a"+ BLACK_BOLD +" brother (human) vs brother (human) "+ BLACK +"game!");
+                System.out.println(WHITE_BOLD +"You chose a"+ WHITE_BOLD +" brother (human) vs brother (human) "+ WHITE +"game!");
                 break;
             case HUMAN_VS_COMPUTER:
-                System.out.println(BLACK_BOLD +"You chose a"+ BLACK_BOLD +" brother (human) vs God (computer) "+ BLACK +"game!");
+                System.out.println(WHITE_BOLD +"You chose a"+ WHITE_BOLD +" brother (human) vs God (computer) "+ WHITE +"game!");
                 break;
             case COMPUTER_VS_COMPUTER:
-                System.out.println(BLACK_BOLD +"You chose a"+ BLACK_BOLD +" God (computer) vs God (computer) "+ BLACK +"game!");
+                System.out.println(WHITE_BOLD +"You chose a"+ WHITE_BOLD +" God (computer) vs God (computer) "+ WHITE +"game!");
                 break;
         }
         String AI1Mode1="";
@@ -58,17 +58,17 @@ public class BrandubhConsole {
         String AI1Mode2="";
         String AI2Mode2="";
         if (mode == 0) {
-            System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+BLACK);
+            System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+WHITE);
             String player1 = getName();
             if (player1.equals("")) player1 = "Player1";
             model.addHumanPlayer(player1);
-            System.out.println(RED_BOLD+"===== ATTACKERS ====="+BLACK);
+            System.out.println(RED_BOLD+"===== ATTACKERS ====="+WHITE);
             String player2 = getName();
             if (player2.equals("")) player2 = "Player2";
             if (player1.toLowerCase().equals(player2.toLowerCase()) && !player2.equals("")) {
-                System.out.println(RED_BOLD + "You can't have two warriors with the same name!" + BLACK);
+                System.out.println(RED_BOLD + "You can't have two warriors with the same name!" + WHITE);
                 do {
-                    System.out.println(BLACK_BOLD + "Enter a new name for the second player, son! Else... The war will never start! " + BLACK);
+                    System.out.println(WHITE_BOLD + "Enter a new name for the second player, son! Else... The war will never start! " + WHITE);
                     player2 = getName();
                 }
                 while (player1.toLowerCase().equals(player2.toLowerCase()));
@@ -79,35 +79,35 @@ public class BrandubhConsole {
             System.out.println("What role do you want to play in the war, brother?");
             String answer = "";
             //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println(PURPLE_BOLD+"1. Defender"+BLACK);
-            System.out.println(PURPLE_BOLD+"2. Attacker"+BLACK);
+            System.out.println(PURPLE_BOLD+"1. Defender"+WHITE);
+            System.out.println(PURPLE_BOLD+"2. Attacker"+WHITE);
             try {
                 answer = BRBController.input.nextLine();
             } catch (Exception e) {
                 System.out.println("Error while reading your answer. Please try again.");
             }
             if (answer.equals("1")){
-                System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+BLACK);
+                System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+WHITE);
                 String player1 = getName();
                 model.addHumanPlayer(player1);
-                System.out.println(RED_BOLD+"===== ATTACKERS ====="+BLACK);
+                System.out.println(RED_BOLD+"===== ATTACKERS ====="+WHITE);
                 AI1Mode1=setAI(1, args);
                 model.addComputerPlayer(AI1Mode1);
             }
             else if (answer.equals("2")){
-                System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+BLACK);
+                System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+WHITE);
                 AI1Mode1=setAI(1, args);
                 model.addComputerPlayer(AI1Mode1);
-                System.out.println(RED_BOLD+"===== ATTACKERS ====="+BLACK);
+                System.out.println(RED_BOLD+"===== ATTACKERS ====="+WHITE);
                 String player1 = getName();
                 model.addHumanPlayer(player1);
             }
         }
         else if (mode == 2) {
-            System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+BLACK);
+            System.out.println(GREEN_BOLD+"===== DEFENDERS ====="+WHITE);
             AI1Mode2=setAI(2, args);
             model.addComputerPlayer(AI1Mode2);
-            System.out.println(RED_BOLD+"===== ATTACKERS ====="+BLACK);
+            System.out.println(RED_BOLD+"===== ATTACKERS ====="+WHITE);
             AI2Mode2=setAI(1, args);
             model.addComputerPlayer(AI2Mode2);
         }
@@ -157,7 +157,7 @@ public class BrandubhConsole {
         }
         if (BRBController.nbParties > 1000) {
             System.out.println("DataMap size: " + BRBController.dataMap.size() + " elements.");
-            System.out.println("This will maybe take " + (BRBController.dataMap.size()/100000)/4 + " seconds to save.");
+            System.out.println("This will maybe take " + (BRBController.dataMap.size()/100000) + " seconds to save.");
             Thread saveFilesThread = new Thread(() -> progressBar(BRBController.dataMap.size()/1000, "Saving files, do not quit... "));
             saveFilesThread.start();
             control.saveAllFiles();
@@ -174,7 +174,7 @@ public class BrandubhConsole {
      * Progress bar
      **/
     public static void progressBar(int sleepTime, String text) {
-        System.out.print(RED_BOLD + "\r" + text + BLACK + "[          ]");
+        System.out.print(RED_BOLD + "\r" + text + WHITE + "[          ]");
         for (int i = 0; i < 10; i++) {
             try {
                 Thread.sleep(sleepTime);
@@ -182,10 +182,10 @@ public class BrandubhConsole {
             } catch (InterruptedException e) {
                 //e.printStackTrace();
             }
-            System.out.print(RED_BOLD + "\r" + text + BLACK + "[");
-            for (int j = 0; j <= i; j++) System.out.print(RED_BOLD + "=" + BLACK);
+            System.out.print(RED_BOLD + "\r" + text + WHITE + "[");
+            for (int j = 0; j <= i; j++) System.out.print(RED_BOLD + "=" + WHITE);
             for (int j = 0; j < 9 - i; j++) System.out.print(" ");
-            System.out.print(BLACK + "]");
+            System.out.print(WHITE + "]");
         }
         System.out.println();
     }
@@ -226,9 +226,9 @@ public class BrandubhConsole {
     public static String setAI(int player, String[] args) {
         int ai;
         System.out.println("Choose your opponent, warrior! Will it be God Odin or God Loki?");
-        System.out.println(PURPLE_BOLD+"1. God Odin (SMART)"+BLACK);
-        System.out.println(GREEN_BOLD+"2. God Loki (EAT)"+BLACK);
-        System.out.println(RED_BOLD+"3. Goddess Frigg (RANDOM)"+BLACK);
+        System.out.println(PURPLE_BOLD+"1. God Odin (SMART)"+WHITE);
+        System.out.println(GREEN_BOLD+"2. God Loki (EAT)"+WHITE);
+        System.out.println(RED_BOLD+"3. Goddess Frigg (RANDOM)"+WHITE);
 
         try {
             if (player == 1)
@@ -276,8 +276,8 @@ public class BrandubhConsole {
         }
     }
     public static int chooseGameMode() {
-        System.out.println(BLACK_BOLD+"Welcome, warrior, to Brandubh!");
-        System.out.println("Oh! Say, son, do you know"+ PURPLE_BRIGHT+ " the rules of the Brandubh?"+BLACK);
+        System.out.println(WHITE_BOLD+"Welcome, warrior, to Brandubh!");
+        System.out.println("Oh! Say, son, do you know"+ PURPLE_BRIGHT+ " the rules of the Brandubh?"+WHITE);
         String answer = "";
         while (true) {
             try {
@@ -315,10 +315,10 @@ public class BrandubhConsole {
             System.out.println(BRBDecider.consoleMessages);
             BRBDecider.consoleMessages = "";
         }
-        System.out.println(BLUE_BOLD + "Speak, son, what kind of war would you like to engage yourself in?" + BLACK);
-        System.out.println("Write " + RED_BOLD +HUMAN_VS_HUMAN + BLACK+" for a brother (human) vs brother (human) war,");
-        System.out.println("or, write "+ RED_BOLD + HUMAN_VS_COMPUTER + BLACK+" for a brother (human) vs God (computer) war!");
-        System.out.println("or, write " + RED_BOLD + COMPUTER_VS_COMPUTER + BLACK+" for a God (computer) vs God (computer) war!");
+        System.out.println(BLUE_BOLD + "Speak, son, what kind of war would you like to engage yourself in?" + WHITE);
+        System.out.println("Write " + RED_BOLD +HUMAN_VS_HUMAN + WHITE+" for a brother (human) vs brother (human) war,");
+        System.out.println("or, write "+ RED_BOLD + HUMAN_VS_COMPUTER + WHITE+" for a brother (human) vs God (computer) war!");
+        System.out.println("or, write " + RED_BOLD + COMPUTER_VS_COMPUTER + WHITE+" for a God (computer) vs God (computer) war!");
 
         //BufferedReader stringReader = new BufferedReader(new InputStreamReader(System.in));
         int mode = 0;
@@ -345,18 +345,18 @@ public class BrandubhConsole {
         try{
             System.out.println("Brandubh is a game born from our ancestors, warrior.");
             Thread.sleep(2000);
-            System.out.println("A "+RED_BOLD+"WAR"+BLACK+", was declared on this 7x7 territory. You can either"+ GREEN_BOLD+" DEFEND"+BLACK+" your Branan or"+ RED_BOLD+" ATTACK"+BLACK +" the enemy's Branan.");
+            System.out.println("A "+RED_BOLD+"WAR"+WHITE+", was declared on this 7x7 territory. You can either"+ GREEN_BOLD+" DEFEND"+WHITE+" your Branan or"+ RED_BOLD+" ATTACK"+WHITE +" the enemy's Branan.");
             Thread.sleep(5000);
-            System.out.println("BUT, beware... If you wish to defend the Branan, you and your brothers will only be "+ GREEN_BOLD+"four"+BLACK+", while your enemy will possess"+ BLACK+ RED_BOLD+" eight "+BLACK +"warriors!");
+            System.out.println("BUT, beware... If you wish to defend the Branan, you and your brothers will only be "+ GREEN_BOLD+"four"+WHITE+", while your enemy will possess"+ WHITE+ RED_BOLD+" eight "+WHITE +"warriors!");
             Thread.sleep(3000);
-            System.out.println("The end of this war is proclaimed if "+ RED_UNDERLINED+"the Branan gets captured between two enemy warriors"+BLACK+", or if "+GREEN_UNDERLINED+"the Branan gets to one of the corners of the board."+BLACK);
+            System.out.println("The end of this war is proclaimed if "+ RED_UNDERLINED+"the Branan gets captured between two enemy warriors"+WHITE+", or if "+GREEN_UNDERLINED+"the Branan gets to one of the corners of the board."+WHITE);
             Thread.sleep(5000);
-            System.out.println("To capture an enemy, you'll have to surround one of them between "+ PURPLE_BOLD+"two of your warriors. "+BLACK+ BLACK_UNDERLINED+"If one enemy soldier enters volonteeringly between two of your warriors, he will NOT be captured."+BLACK);
+            System.out.println("To capture an enemy, you'll have to surround one of them between "+ PURPLE_BOLD+"two of your warriors. "+WHITE+ BLACK_UNDERLINED+"If one enemy soldier enters volonteeringly between two of your warriors, he will NOT be captured."+WHITE);
             Thread.sleep(8000);
-            System.out.println(PURPLE_BOLD+"The corners and the center of the board are unaccessible for all the warriors."+BLACK+" "+ GREEN_BOLD+"Only the King can get there."+BLACK);
+            System.out.println(PURPLE_BOLD+"The corners and the center of the board are unaccessible for all the warriors."+WHITE+" "+ GREEN_BOLD+"Only the King can get there."+WHITE);
             Thread.sleep(3000);
             System.out.println("And if the Branan steps out of the center, his throne, he can" +GREEN_BOLD+" no longer return to it.");
-            System.out.println(BLACK_BOLD+"============= END OF THE RULES =============");
+            System.out.println(WHITE_BOLD+"============= END OF THE RULES =============");
             System.out.println("");
         }
         catch(InterruptedException e){

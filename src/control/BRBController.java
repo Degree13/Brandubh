@@ -73,15 +73,15 @@ public class BRBController extends Controller {
         int[] score = BRBStageModel.getScore();
 
         if (nbParties < 1000) {
-            System.out.println(BLACK +
+            System.out.println(WHITE +
                     "========================================" +
-                    "\nScore : " + BLACK_BOLD + "BLACK " + score[0] + BLUE + " - " + RED_BOLD + "RED " + score[1] + BLACK +
+                    "\nScore : " + BLACK_BOLD + "BLACK " + score[0] + BLUE + " - " + RED_BOLD + "RED " + score[1] + WHITE +
                     "\n========================================");
         } else {
             System.out.print(
-                    "\r" + ( BLACK +
+                    "\r" + ( WHITE +
                     "========================================" +
-                    "\nScore : " + BLACK_BOLD + "BLACK " + score[0] + BLUE + " - " + RED_BOLD + "RED " + score[1] + BLACK +
+                    "\nScore : " + BLACK_BOLD + "BLACK " + score[0] + BLUE + " - " + RED_BOLD + "RED " + score[1] + WHITE +
                     "\n========================================"));
         }
         System.out.println();
@@ -362,9 +362,9 @@ public class BRBController extends Controller {
             boolean ok = false;
             while (!ok) {
                 if (model.getIdPlayer()==1) {
-                    System.out.print(RED_BOLD + p.getName() + BLACK + " > ");
+                    System.out.print(RED_BOLD + p.getName() + WHITE + " > ");
                 } else {
-                    System.out.print(BLACK_BOLD + p.getName() + BLACK + " > ");
+                    System.out.print(BLACK_BOLD + p.getName() + WHITE + " > ");
                 }
                 try {
                     String line = input.nextLine();

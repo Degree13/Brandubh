@@ -1,6 +1,6 @@
 package boardifier.control;
 
-import boardifier.model.*;
+import boardifier.model.Model;
 import boardifier.model.action.ActionList;
 import boardifier.model.action.GameAction;
 import boardifier.model.animation.Animation;
