@@ -2,7 +2,7 @@
 
 Want to test the graphic version ? *(Unzip and play, no dependencies required !)*   
 
-[![Download Brandubh](https://img.shields.io/badge/Download-YourApp-blue)](https://github.com/Degree13/Brandubh/blob/master/Brandubh.zip)   
+[![Download Brandubh](https://img.shields.io/badge/Download-Brandubh-blue)](https://github.com/Degree13/Brandubh/raw/master/Brandubh.zip)
 
 ## 🚀 Group members
 - 🧑‍💻 Théo GOUSSOT
