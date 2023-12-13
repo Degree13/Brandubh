@@ -1,5 +1,8 @@
 # 🎲 Groupe n°2 - Brandubh 🎲
 
+Want to test the graphic version ? [Download the executable !](https://github.com/Degree13/Brandubh/blob/master/Brandubh.zip)   
+*(Unzip and play, no dependencies required !)*
+
 ## 🚀 Group members
 - 🧑‍💻 Théo GOUSSOT
 - 🧑‍💻 Noah NICOLAS
@@ -34,4 +37,4 @@ Choose the artificial intelligence 1 to participate in the game from the followi
 - If you choose a game mode with a single player and an artificial intelligence, indicate the number of games to be played.
 
 ### 4️⃣ Argument 4: Number of games
-If you have chosen a game mode with two artificial intelligences, indicate the number of games to be played here.
+If you have chosen a game mode with two artificial intelligences, indicate the number of games wished to be played here.
