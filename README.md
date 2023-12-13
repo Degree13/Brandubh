@@ -17,6 +17,25 @@ Want to test the graphic version ? *(Unzip and play, no dependencies required !)
 ## ⚙️ Game parameters
 Customize your gaming experience using the following arguments:
 
+## Graphic
+
+*Game*
+- Intro : Planned tutorial (unimplemented)
+- Quit : Exit the program
+
+*New Game*
+- PvP : Player VS Player (you can play both attackers and defenders)
+- EvP : Environnement VS Player (Computer plays first)
+- PvE : Player VS Environnement (Player plays first)
+- EvE : Environnement VS Environnement (Computer plays against Computer)
+
+*Select IA*
+- Here you can select the AI you want to play against in EvP and PvE scenarios. You can also change the AI you are facing while playing.
+  (In EvE scenario the system will prompt you to select both AIs before playing)
+
+
+## Console
+
 ### 1️⃣ Argument 1: Game mode
 Select the desired game mode:
 - 0 = human vs human
