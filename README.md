@@ -2,6 +2,11 @@
 
 Want to test the graphic version ? *(Unzip and play, no dependencies required !)*   
 
+<div style="display: flex;">
+    <img src="https://github.com/Degree13/Brandubh/assets/53911681/c6c168ad-9e1a-4418-968c-ee4bfc14a7db" alt="Image 1" width="400" />
+    <img src="https://github.com/Degree13/Brandubh/assets/53911681/c26715f5-66ad-4e38-9c31-bd3d2dc1c29b" alt="Image 2" width="400" />
+</div>   
+  
 [![Download Brandubh](https://img.shields.io/badge/Download-Brandubh-blue)](https://github.com/Degree13/Brandubh/raw/master/Brandubh.zip)
 
 ## 🚀 Group members
